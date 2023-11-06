@@ -1,5 +1,7 @@
 # fosscu
 
+**This is a monorepo with bun workspaces**
+
 To install dependencies:
 
 ```bash
@@ -9,7 +11,16 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun dev
 ```
 
-This project was created using `bun init` in bun v1.0.0. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+To build:
+
+```bash
+bun run build
+```
+Lint:
+
+```bash
+bun lint
+```

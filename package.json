@@ -1,19 +1,26 @@
 {
-  "name": "fosscu",
+  "name": "my-turborepo",
+  "packageManager": "bun@1.0.0",
   "version": "0.1.0",
+  "scripts": {
+    "build": "node scripts/run-workspaces.js build",
+    "dev": "node scripts/run-workspaces.js dev",
+    "lint": "node scripts/run-workspaces.js lint",
+    "prepare": "husky install",
+    "format": "node scripts/run-workspaces.js format"
+  },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*",
+    "configs/*"
   ],
   "devDependencies": {
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "tsconfig": "*"
   },
   "dependencies": {
+    "glob": "^10.3.10",
     "husky": "^8.0.3"
-  },
-  "scripts": {
-    "prepare": "husky install"
   }
 }
