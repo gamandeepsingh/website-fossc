@@ -1,9 +1,8 @@
 {
   "name": "@fosscu/ui",
   "version": "0.1.0",
-  "type": "module",
   "main": "./index.ts",
-  "types": "./index.tsx",
+  "types": "./index.ts",
   "scripts": {
     "lint": "eslint \"**/*.ts*\"",
     "ui:add": "bunx shadcn-ui@latest add"
