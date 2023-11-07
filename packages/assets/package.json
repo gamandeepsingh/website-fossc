@@ -1,0 +1,13 @@
+{
+  "name": "@fosscu/assets",
+  "module": "index.ts",
+  "main": "./index.ts",
+  "types": "./index.tsx",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
