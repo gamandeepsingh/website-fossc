@@ -1,42 +1,30 @@
-import React from 'react';
+import {extendVariants, Button} from "@nextui-org/react";
 
-interface ButtonProps {
-  size: 'sm' | 'md';
-  color: 'white' | 'black' | 'blue';
-  children: React.ReactNode;
-  onClick?: () => void;
-}
-
-const sizeClasses = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-3 text-md',
-};
-
-const colorClasses = {
-  white: 'text-black bg-white hover:bg-gray-200 focus:ring-gray-300',
-  black: 'text-white bg-black hover:bg-gray-800 focus:ring-gray-600',
-  blue: 'text-white bg-blue-500 hover:bg-blue-600 focus:ring-blue-300 ring-opacity-50 ring-offset-2',
-};
-
-export const Button: React.FC<ButtonProps> = ({ size, color, children, onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      className={`
-        ${sizeClasses[size]} 
-        ${colorClasses[color]} 
-        focus:outline-none 
-        focus:ring 
-        rounded border 
-        border-gray-200 
-        shadow-sm 
-        transition 
-        ease-in-out 
-        duration-150
-        ${color === 'blue' ? 'backdrop-filter backdrop-blur-sm' : ''}
-      `}
-    >
-      {children}
-    </button>
-  );
-};
+export const MyButton = extendVariants(Button, {
+  variants: {
+    color: {
+      olive: "text-[#000] bg-[#84cc16]",
+      orange: "bg-[#ff8c00] text-[#fff]",
+      violet: "bg-[#8b5cf6] text-[#fff]",
+    },
+    isDisabled: {
+      true: "bg-[#eaeaea] text-[#000] opacity-50 cursor-not-allowed",
+    },
+    size: {
+      xs: "px-unit-2 min-w-unit-12 h-unit-6 text-tiny gap-unit-1 rounded-small",
+      md: "px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-small",
+      xl: "px-unit-8 min-w-unit-28 h-unit-14 text-large gap-unit-4 rounded-medium",
+    },
+  },
+  defaultVariants: {
+    color: "olive",
+    size: "xl",
+  },
+  compoundVariants: [
+    {
+      isDisabled: true,
+      color: "olive",
+      class: "bg-[#84cc16]/80 opacity-100",
+    },
+  ],
+});
