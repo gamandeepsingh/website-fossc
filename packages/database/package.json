@@ -2,11 +2,18 @@
   "name": "database",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "prisma:generate": "bun prisma generate"
+  },
   "devDependencies": {
+    "@prisma/cli": "^2.20.1",
     "bun-types": "latest",
     "prisma": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.5.2"
   }
 }
