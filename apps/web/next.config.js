@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    transpilePackages: ['@fosscu/ui'],
+}
 
 module.exports = nextConfig

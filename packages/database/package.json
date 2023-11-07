@@ -1,5 +1,5 @@
 {
-  "name": "database",
+  "name": "@fosscu/database",
   "module": "index.ts",
   "type": "module",
   "scripts": {

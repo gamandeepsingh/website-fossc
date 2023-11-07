@@ -168,6 +168,5 @@ dist
 .yarn/install-state.gz
 .pnp.\*
 
-# moon
-.moon/cache
-.moon/docker
+# IntelliJ based IDEs
+.idea
