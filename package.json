@@ -20,7 +20,6 @@
     "tsconfig": "*"
   },
   "dependencies": {
-    "@moonrepo/cli": "^1.16.1",
     "glob": "^10.3.10",
     "husky": "^8.0.3"
   }
