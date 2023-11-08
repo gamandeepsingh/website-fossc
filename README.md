@@ -30,6 +30,7 @@ bun lint
 ## Overview
 
 This monorepo is structured to handle multiple applications and shared packages efficiently. It utilizes `bun` for package management, along with workspaces to manage dependencies across different parts of the project.
+[Read about bun workspaces.](https://bun.sh/docs/install/workspaces)
 
 ## Directory Structure
 
