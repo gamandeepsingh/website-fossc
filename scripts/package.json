@@ -1,10 +1,31 @@
 {
-  "name": "scripts",
+  "name": "@fosscu/scripts",
+  "version": "0.1.0",
+  "description": "development scripts for fosscu",
+  "main": "index.js",
   "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "@fosscu",
+  "license": "ISC",
+  "keywords": [
+    "workspaces",
+    "npm",
+    "script"
+  ],
+  "dependencies": {
+    "glob": "^10.3.10"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "bin": {
+    "fosscuw": "./bin.js"
   }
 }
